@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Spaces | Find Your Dream Property</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <a href="#" class="logo">ELITE<span>SPACES.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+    <nav class="navbar" id="navbar">
+      <a href="#home">Home</a>
+      <a href="#properties">Buy</a>
+      <a href="#services">Rent</a>
+      <a href="#services">Sell</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="header-btn">List a Property ↗</a>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow">WELCOME TO ELITE SPACES</p>
+      <h1>Find a place<br>you'll <span>love to call home.</span></h1>
+      <p class="hero-description">
+        Discover exceptional properties and experience
+        a better way to find your dream home.
+      </p>
+      <a href="#properties" class="primary-btn">Explore Properties ↗</a>
+    </div>
+
+    <div class="search-box">
+      <div class="search-field">
+        <label>Location</label>
+        <input type="text" id="location" placeholder="City or area">
+      </div>
+
+      <div class="search-field">
+        <label>Property Type</label>
+        <select id="type">
+          <option value="all">All Properties</option>
+          <option value="Apartment">Apartment</option>
+          <option value="Villa">Villa</option>
+          <option value="House">House</option>
+        </select>
+      </div>
+
+      <div class="search-field">
+        <label>Maximum Price</label>
+        <select id="price">
+          <option value="all">Any Price</option>
+          <option value="10000000">₹1 Crore</option>
+          <option value="20000000">₹2 Crore</option>
+          <option value="30000000">₹3 Crore</option>
+          <option value="50000000">₹5 Crore</option>
+        </select>
+      </div>
+
+      <button id="searchBtn" class="search-btn">Search ↗</button>
+    </div>
+  </section>
+
+  <!-- FEATURED PROPERTIES -->
+  <section class="properties section" id="properties">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">OUR COLLECTION</p>
+        <h2>Featured Properties</h2>
+        <p>Explore handpicked properties designed for exceptional living.</p>
+      </div>
+      <a href="#contact" class="text-link">Discover More ↗</a>
+    </div>
+
+    <p id="resultMessage" class="result-message">Showing our featured properties</p>
+
+    <div class="property-grid" id="propertyGrid">
+
+      <article class="property-card" data-type="Villa" data-price="25000000" data-location="Mohali">
+        <div class="property-image">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900" alt="Luxury villa">
+          <span class="tag">For Sale</span>
+        </div>
+        <div class="property-info">
+          <p class="property-type">LUXURY VILLA</p>
+          <h3>Modern Luxury Villa</h3>
+          <p class="address">📍 Sector 82, Mohali</p>
+          <div class="details">
+            <span>🛏 4 Beds</span>
+            <span>🛁 3 Baths</span>
+            <span>📐 3200 sqft</span>
+          </div>
+          <div class="property-bottom">
+            <h3>₹2.5 Cr</h3>
+            <a href="#contact">View Property ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="property-card" data-type="Apartment" data-price="12000000" data-location="Chandigarh">
+        <div class="property-image">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900" alt="Modern apartment">
+          <span class="tag">For Sale</span>
+        </div>
+        <div class="property-info">
+          <p class="property-type">PREMIUM APARTMENT</p>
+          <h3>Elegant City Residence</h3>
+          <p class="address">📍 Sector 17, Chandigarh</p>
+          <div class="details">
+            <span>🛏 3 Beds</span>
+            <span>🛁 2 Baths</span>
+            <span>📐 1800 sqft</span>
+          </div>
+          <div class="property-bottom">
+            <h3>₹1.2 Cr</h3>
+            <a href="#contact">View Property ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="property-card" data-type="House" data-price="18000000" data-location="Kharar">
+        <div class="property-image">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900" alt="Contemporary house">
+          <span class="tag">For Sale</span>
+        </div>
+        <div class="property-info">
+          <p class="property-type">CONTEMPORARY HOME</p>
+          <h3>Serene Family Home</h3>
+          <p class="address">📍 Sunny Enclave, Kharar</p>
+          <div class="details">
+            <span>🛏 3 Beds</span>
+            <span>🛁 3 Baths</span>
+            <span>📐 2400 sqft</span>
+          </div>
+          <div class="property-bottom">
+            <h3>₹1.8 Cr</h3>
+            <a href="#contact">View Property ↗</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <p id="noResults" class="no-results" hidden>No properties match your search. Try different filters.</p>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">WHAT WE OFFER</p>
+        <h2>Real Estate Made Simple</h2>
+        <p>Whatever your property goals, we are here to help.</p>
+      </div>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon">⌂</div>
+        <h3>Buy a Property</h3>
+        <p>Find the perfect home from our carefully selected collection.</p>
+        <a href="#properties">Explore homes ↗</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⌑</div>
+        <h3>Rent a Property</h3>
+        <p>Discover comfortable spaces that fit your lifestyle and budget.</p>
+        <a href="#contact">Find rentals ↗</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⌂</div>
+        <h3>Sell a Property</h3>
+        <p>Get expert guidance and connect with the right buyers.</p>
+        <a href="#contact">Sell with us ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1000" alt="Elegant modern home interior">
+      <div class="experience">
+        <strong>10+</strong>
+        <span>Years of<br>Experience</span>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <p class="eyebrow">ABOUT ELITE SPACES</p>
+      <h2>More than properties.<br>We create possibilities.</h2>
+      <p>
+        At Elite Spaces, we believe finding a property is more
+        than making a purchase. It is about finding a place
+        where your future begins.
+      </p>
+      <p>
+        Our team is committed to making every real estate
+        journey simple, transparent and rewarding.
+      </p>
+
+      <div class="stats">
+        <div><strong>500+</strong><span>Properties</span></div>
+        <div><strong>350+</strong><span>Happy Clients</span></div>
+        <div><strong>10+</strong><span>Years Experience</span></div>
+      </div>
+      <a href="#contact" class="primary-btn">Know More About Us ↗</a>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why section">
+    <div class="section-heading centered">
+      <p class="eyebrow">THE ELITE ADVANTAGE</p>
+      <h2>Why Choose Elite Spaces?</h2>
+      <p>Making every property decision more confident and convenient.</p>
+    </div>
+
+    <div class="why-grid">
+      <div><span>01</span><h3>Local Expertise</h3><p>Knowledge of locations, communities and market opportunities.</p></div>
+      <div><span>02</span><h3>Trusted Guidance</h3><p>Honest advice and transparent communication at every step.</p></div>
+      <div><span>03</span><h3>Personalised Service</h3><p>Property recommendations based on your needs and budget.</p></div>
+      <div><span>04</span><h3>Complete Support</h3><p>Guidance throughout your buying, selling or renting journey.</p></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section">
+    <div class="section-heading centered">
+      <p class="eyebrow">CLIENT STORIES</p>
+      <h2>What Our Clients Say</h2>
+    </div>
+
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"The team made finding our dream home so easy. Their guidance and professionalism were exceptional."</p>
+        <h4>Priya Sharma</h4>
+        <span>Home Buyer</span>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Excellent service, clear communication and a smooth experience from the first meeting to the final deal."</p>
+        <h4>Rahul Mehta</h4>
+        <span>Property Investor</span>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"A professional and helpful team. They understood exactly what we were looking for."</p>
+        <h4>Simran Kaur</h4>
+        <span>Home Buyer</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="contact-info">
+      <p class="eyebrow">LET'S CONNECT</p>
+      <h2>Let's Find Your<br>Perfect Space.</h2>
+      <p>Have a property in mind? Get in touch with our team today.</p>
+      <p>📍 Mohali, Punjab, India</p>
+      <p>✉ hello@elitespaces.com</p>
+      <p>☎ +91 98765 43210</p>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <h3>Send Us an Enquiry</h3>
+      <input type="text" id="name" placeholder="Your Full Name" required>
+      <input type="email" id="email" placeholder="Your Email Address" required>
+      <input type="tel" id="phone" placeholder="Your Phone Number" required>
+      <select id="interest" required>
+        <option value="">I'm interested in...</option>
+        <option>Buying a Property</option>
+        <option>Renting a Property</option>
+        <option>Selling a Property</option>
+        <option>Property Investment</option>
+      </select>
+      <textarea id="message" placeholder="Tell us what you're looking for"></textarea>
+      <button type="submit" class="primary-btn">Submit Enquiry ↗</button>
+      <p id="formMessage" class="form-message"></p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>
+      <a href="#" class="logo footer-logo">ELITE<span>SPACES.</span></a>
+      <p>Creating spaces. Building futures.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#properties">Properties</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+
+    <p class="copyright">© 2026 Elite Spaces. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
